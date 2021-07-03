@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Previsao</title>
+        <link rel="stylesheet" href="{{ url_for('static',
+         filename="css/bootstrap.min.css") }}">
+    </head>
+    <body>
+        <div style="align-self: center;" class="col-md-4 col-offset-4">
+            <h2>Previsão</h2>
+
+            <form action="" method="POST">
+                {{form.csrf_token}}
+                <div class="form-gruop">
+                    <label>Insira o Id</label>
+                    {{form.Id(class="form-control w-10", placeholder="Id")}}
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                {% if form.validate_on_submit() %}
+                <div>
+                    <h1>Resposta</h1>
+                    <h1>{{prev}}</h1>
+                    <img src="{{url_for('static', filename='imagem.png')}}" />
+                </div>
+                <div>
+                    <h1>Acurácia</h1>
+                    <h1>{{acc}}</h1>
+                </div>
+                <div>
+                    <h1>Desvio Padrão</h1>
+                    <h1>{{desvPad}}</h1>
+                </div>
+                {% endif %}
+            </form>
+            <div style="height: 100px;">
+                <a href="index"><button type="button" class="w-100 h-50 btn btn-secondary btn-lg">Voltar</button></a>
+            </div>
+        </div>
+    </body>
+</html>

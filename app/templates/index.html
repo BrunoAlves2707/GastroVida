@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Gastrovida</title>
+        <link rel="stylesheet" href="{{ url_for('static',
+         filename="css/bootstrap.min.css") }}">
+    </head>
+    <body>
+        <div class="container">
+            <div style="height: 100px;" class="row w-100" >
+                <h1 style="text-align: center;">Selecione Uma Opção</h1>
+            </div>
+            <div style="height: 100px;" class="row w-100">
+                <a href="previsao"><button type="button" class="w-100 h-50 btn btn-primary btn-lg btn-block">Previsão</button></a>
+            </div>
+            <div style="height: 100px;" class="row w-100">
+                <a href="predisao"><button type="button" class="w-100 h-50 btn btn-secondary btn-lg btn-block">Predição</button></a>
+            </div>  
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="{{ url_for('static',
+        filename="js/bootstrap.min.js") }}"></script>
+    </body>
+</html>
